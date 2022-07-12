@@ -35,7 +35,7 @@ export default function Index({ users }: { users: User[] }) {
 }
 
 export async function getStaticProps() {
-  const users = [{ id: 1 }, { id: 2 }, { id: 1 }];
+  const users = [{ id: 1 }, { id: 2 }, { id: 5 }];
 
   return {
     props: {
