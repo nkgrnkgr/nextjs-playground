@@ -1,6 +1,7 @@
 import useSWR from "swr";
 
-const fetcher = (...args: any) => fetch(...args).then((res) => res.json());
+const fetcher = (input: RequestInfo | URL, init?: RequestInit) =>
+  fetch(input, init).then((res) => res.json());
 
 export const useUsers = () => {
   const { data, error } = useSWR("/api/users", fetcher);
