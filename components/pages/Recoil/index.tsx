@@ -1,6 +1,9 @@
 import { Counter } from "../../model/Counter";
+import { useCounter } from "../../model/Counter/useCounter";
 
 const Component: React.FC = () => {
+  const {} = useCounter("1");
+
   return (
     <div>
       <Counter componentId="1" />
