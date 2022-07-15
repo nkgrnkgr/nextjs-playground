@@ -1,12 +1,12 @@
-import { atom, useRecoilState } from "recoil";
+import { atom, atomFamily, useRecoilState } from "recoil";
+
+const counterFamily = atomFamily({
+  key: "counter",
+  default: 0,
+});
 
 export const useCounter = (counterId: string) => {
-  const counterState = atom({
-    key: `counter:${counterId}`,
-    default: 0,
-  });
-
-  const [count, setCount] = useRecoilState(counterState);
+  const [count, setCount] = useRecoilState(counterFamily(counterId));
 
   const increment = () => {
     setCount(count + 1);
