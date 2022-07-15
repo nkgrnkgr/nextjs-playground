@@ -1,4 +1,4 @@
-import { useCounter } from "./useCounter";
+import { useCounter } from "../../../hooks/useCounter";
 
 type Props = {
   componentId: string;

@@ -1,9 +1,5 @@
-import { atom, atomFamily, useRecoilState } from "recoil";
-
-const counterFamily = atomFamily({
-  key: "counter",
-  default: 0,
-});
+import { useRecoilState } from "recoil";
+import { counterFamily } from "../state/Counter";
 
 export const useCounter = (counterId: string) => {
   const [count, setCount] = useRecoilState(counterFamily(counterId));
